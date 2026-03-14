@@ -37,4 +37,4 @@ Real World Analogy:
     Improves security
 
 * Volume - where we store our container/files
-* Bridged Adapter Network - using puppet tool
+* Bridged Adapter Network - using puppet tool.
