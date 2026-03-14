@@ -22,10 +22,10 @@ Real World Analogy:
     a. Each container has its own process tree
     b. Process IDS inside container start from 1
     c. A container cannot see host or other container processes
-2. NEtwork Namespaces :
+2. Network Namespaces :
     Each container gets:
         Its own IP address
-        Its own own ports
+        Its own ports
     Containers can run apps on the same port without conflict
 3. Mount Namespace :
     Each container has itsown filesystem view
@@ -33,7 +33,7 @@ Real World Analogy:
 4. UTS Namespace :
     Allows each Container to have its own hostname
 5. User namespace:
-    MAps container users to non-root users on host
+    Maps container users to non-root users on host
     Improves security
 
 * Volume - where we store our container/files
