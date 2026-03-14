@@ -28,7 +28,7 @@ Real World Analogy:
         Its own ports
     Containers can run apps on the same port without conflict
 3. Mount Namespace :
-    Each container has its own filesystem view
+    Each container has itsown filesystem view
     File change inside container do not affect host 
 4. UTS Namespace :
     Allows each Container to have its own hostname
