@@ -1,0 +1,56 @@
+Image vs Container:
+
+Image: 
+1. 
+
+Image Registry:
+
+An image registry =is a centralised repo used to store, manage, version and distribute container images.
+
+It enables:
+
+1. Sharing images across teams and environments
+2. Consistent deployment in development , testing and production 
+3. integration with ci/cd
+
+In DevOps, an image registry plays the same role:
+1. GitHub -> for source code
+2. Maven Central -> for Java Libraries
+
+Without Registry:
+
+1.  Each system must build images independently
+2. High consistency across environments
+3. Manual software installation
+4. No version control of application environments
+
+With a registry:
+
+1. Build once, deploy everywhere
+2. Faster deployments
+3. version-control environments
+4. Rollbacks capabilities
+
+Types of images Registries:
+
+3.1 Public Image Registries
+Public registries allow open access to images.
+
+Characteristics:
+1. Images are publicly available
+2.
+
+
+Private Image Registries:
+Pvt Reg restrict access using authentication and authorization.
+
+Char:
+1. Secure and controlled access
+2. Used in enterprises 
+3. Stores proprietary applications
+4. Integrated with IAM and BRAC
+
+Examples:
+1. AWS Elastic Container Registry (ECR)
+2. Azure Container Registry (ACR)
+3. GitHub Container Registry (GHR)

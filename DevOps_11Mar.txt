@@ -1,0 +1,40 @@
+Types of Container: 
+
+1. High-Level Container - 
+2. Low-Level Container - runc (OCI - compliant)
+    Directly interacts: 
+        linux kernel
+        Namespaces
+        cgroups
+
+Purpose of Namespaces: Process isolation (container is run alone even sharing the same OS kernel... This isolation is acheived by Linux namespaces)
+
+Namespace is used for tagging predefined functions like -p, -e, etc which already exists in these namespaces
+
+Real World Analogy: 
+1. Container Image: Packed Lunch Box
+2. Container Runtime: Person who opens it, serves food and cleans up
+
+* Namespaces are Linux kernel features 
+
+@ Namespace Used in Containers:
+1. PID Namespace (Process Isolation)
+    a. Each container has its own process tree
+    b. Process IDS inside container start from 1
+    c. A container cannot see host or other container processes
+2. NEtwork Namespaces :
+    Each container gets:
+        Its own IP address
+        Its own own ports
+    Containers can run apps on the same port without conflict
+3. Mount Namespace :
+    Each container has itsown filesystem view
+    File change inside container do not affect host 
+4. UTS Namespace :
+    Allows each Container to have its own hostname
+5. User namespace:
+    MAps container users to non-root users on host
+    Improves security
+
+* Volume - where we store our container/files
+* Bridged Adapter Network - using puppet tool
