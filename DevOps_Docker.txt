@@ -1,6 +1,6 @@
 Introductionto Docker Hub:
 
-Centralized repo fro Docker images:
+Centralized repo for Docker images:
 
 Features:
 1. Public and pvt repos
