@@ -1,4 +1,4 @@
-Introductionto Docker Hub:
+Introduction to Docker Hub:
 
 Centralized repo for Docker images:
 
