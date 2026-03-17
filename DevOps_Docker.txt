@@ -1,0 +1,15 @@
+Introductionto Docker Hub:
+
+Centralized repo fro Docker images:
+
+Features:
+1. Public and pvt repos
+2. Official images
+
+Docker Architecture:
+
+1. Docker Client
+2. Docker Daemon
+3. Docker Images
+4. Containers
+5. Docker Registry (Docker Hub)
