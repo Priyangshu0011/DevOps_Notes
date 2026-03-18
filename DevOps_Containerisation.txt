@@ -1,8 +1,3 @@
-Image vs Container:
-
-Image: 
-1. 
-
 Image Registry:
 
 An image registry =is a centralised repo used to store, manage, version and distribute container images.
