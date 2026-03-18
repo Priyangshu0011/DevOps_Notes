@@ -10,4 +10,4 @@ docker volume inspect myvolume - Shows volume details
 docker volume rm myvolume - remove the volume
 
 docker exec -it <container id> bash - start the existing container 
-docker run -it ubuntu /bin/bash - start a new container into the running mode (new containers are created ar every iteration)
+docker run -it ubuntu /bin/bash - start a new container into the running mode (new containers are created at every iteration)
