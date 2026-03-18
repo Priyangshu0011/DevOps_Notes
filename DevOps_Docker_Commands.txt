@@ -1,0 +1,13 @@
+Container Interaction Commands:
+
+docker exec -it <container id> bash - 
+
+Docker volume Commands:
+
+dcoker volume create myvolume - Creates a persistent storage volume
+docker volume ls - lists all volumes
+docker volume inspect myvolume - Shows volume details
+docker volume rm myvolume - remove the volume
+
+docker exec -it <container id> bash - start the existing container 
+docker run -it ubuntu /bin/bash - start a new container into the running mode (new containers are created ar every iteration)

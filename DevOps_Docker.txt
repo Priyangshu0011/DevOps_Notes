@@ -13,3 +13,12 @@ Docker Architecture:
 3. Docker Images
 4. Containers
 5. Docker Registry (Docker Hub)
+
+-d - Daemon
+-p - Networking 
+-it - iterative
+-f - forceful
+-- - long form names
+
+rmi - remove the Container
+ps to show cintainer info
