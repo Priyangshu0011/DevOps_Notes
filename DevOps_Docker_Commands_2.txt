@@ -1,0 +1,26 @@
+Container Interaction Commands
+
+1. docker exec -it <container_id> bash -Opens terminal inside a running 
+container.
+2. docker logs <container_id>-Shows container output logs.
+3. docker inspect <container_id>- Displays detailed configuration in JSON 
+format.
+4. docker stats-Shows live CPU, memory usage of containers.
+5. docker top <container_id>Displays running processes inside container.
+6. docker run -dit --name myubuntu ubuntu
+7. docker start ubuntu
+
+
+Volume Commands
+
+1. docker volume create myvolume-Creates a persistent storage volume.
+2. docker volume ls-Lists all volumes.
+3. docker volume inspect myvolume-Shows volume details.
+4. docker volume rm myvolume-Removes a volume.
+
+Network Commands
+
+1. docker network ls-Lists available Docker networks.
+2. docker network create mynetwork-Creates a custom network.
+3. docker network inspect mynetwork-Shows network details.
+4. docker network rm mynetwork-Deletes a network.
