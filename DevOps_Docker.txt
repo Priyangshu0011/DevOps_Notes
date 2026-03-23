@@ -1,10 +1,11 @@
 Introduction to Docker Hub:
 
-Centralized repo for Docker images:
-
-Features:
-1. Public and pvt repos
+Centralized repository for Docker images
+ Features:
+1. Public and private repositories
 2. Official images
+3. Automated builds
+4. Importance in DevOps
 
 Docker Architecture:
 
@@ -22,3 +23,15 @@ Docker Architecture:
 
 rmi - remove the Container
 ps to show cintainer info
+
+Docker Life Cycle Stages:
+1. Build: Create an image
+2. Ship: Share images via Docker Hub
+3. Run: Start containers
+
+Container states:
+1. Created
+2. Running
+3. Paused
+4. Stopped
+
