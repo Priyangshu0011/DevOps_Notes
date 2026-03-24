@@ -43,3 +43,10 @@ docker run -d
 -e MYSQL_USER=user1
 -e MYSQL_USER_PASSWORD=12345
 
+
+-p optional flag in run command:
+ 
+-p stands for publish port.
+	It maps a port on your host machine to a port inside the container 
+
+
