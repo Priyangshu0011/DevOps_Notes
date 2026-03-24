@@ -1,0 +1,45 @@
+What are environment variables?
+
+- key-pair values
+
+Need of environment variables in Docker:
+
+Without -e:
+1. Configuration must be hard - coded in the image 
+2. Need to rebuild image for every second
+
+With -e:
+1. Same image - different behavior 
+2. Secure & flexibility configuration 
+3. Widely used in microservices and clod deployments
+
+
+Example 1: Setting Environment variables: 
+
+docker run -e MY_VAR=value httpd env
+
+1. This command sets an environment variable 'MY_VAR' to the value "value" and runs a new container form the 'httpd' image.
+
+The 'env' command is executed to display the list of environment variables in the container.
+
+Example 2: Run a container from Image and display the variable name inside it:
+
+docker run -it -e MY_NAME=Priyangshu ubuntu bash
+
+It will open the container and we can check the env variable inside it as:
+
+Echo $ MY_NAME
+
+
+Multiple Environment Variables:
+
+- docker run -e APP_ENV=production -e APP_VERSION=1.0 nginx
+
+Same for MySQL Container
+
+docker run -d
+-e MYSQL_ROOT_PASSWORD=root123
+-e MYSQL_DATABASE=college
+-e MYSQL_USER=user1
+-e MYSQL_USER_PASSWORD=12345
+
