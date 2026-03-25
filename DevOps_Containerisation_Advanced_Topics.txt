@@ -48,5 +48,3 @@ docker run -d
  
 -p stands for publish port.
 	It maps a port on your host machine to a port inside the container 
-
-

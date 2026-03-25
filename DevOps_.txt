@@ -1,0 +1,22 @@
+port 8080/80 - here 8080 is host port and 80 is container port
+
+without -p :
+docker run nginx 
+
+docker run -d -p 3307:3306 --name mysql-test -e MYSQL_ROOT_PASSWORD=root123 mysql
+
+exec:
+
+- Access the docker container and run commands inside the container in bash
+
+docker exec -it container_id bash/env
+
+Removing container:
+- remove the container with the mentioned id
+
+Removing image:
+- Remove the docker image with the image id
+
+- to remove the imgae forcefeully
+docker rmi -f <image id>
+
