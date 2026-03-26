@@ -20,3 +20,4 @@ Removing image:
 - to remove the imgae forcefeully
 docker rmi -f <image id>
 
+Pull the image of mongo and create a container.
