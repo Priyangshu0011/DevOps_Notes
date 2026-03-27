@@ -1,0 +1,54 @@
+Task 1:
+
+Run a Docker container named “DB-app" based on the “mongodb" image, and expose port 80 on the host to port 8082 on the container?
+    Answer:
+        
+        docker pull mongo
+
+        docker run -d --name DB-app -p 80:8082 mongo
+
+Task 2:
+
+You are a DevOps engineer in a startup company. The 
+development team asks you to quickly deploy a simple web 
+page that displays the message:
+
+Use the official httpd Docker image.
+Run the container so it is accessible on port 8080 of the host 
+machine.
+
+Create or update an HTML file inside the container to display the 
+required message.
+
+Verify the output using a command-line tool.
+
+Properly stop and remove the container after testing.
+
+    Answer:
+
+        1. docker run -d --name apache_web -p 8081:80 httpd
+        2. docker exec -it apache_web bash -c "echo '<h1>Hello from 
+        Docker Apache!</h1>' > /usr/local/apache2/htdocs/index.html"
+        3. curl http://localhost:8081
+        4. docker stop apache_web
+        5. docker rm apache_web
+
+Task 3:
+
+How would you use the docker run command with -it, -e, -v, 
+and --name to:
+1. Set an environment variable APP_ENV=production.
+2. Bind a local directory /app/data to /data inside the 
+container.
+3. Name the container my_app.
+
+    Answer:
+
+    1. mkdir C:\app\data
+    2. docker run -it --name my_app -e APP_ENV=production -v   C:\app\data:/data ubuntu /bin/bash
+     echo $APP_ENV
+    3. echo "Hello this is my first program" > /data/test.txt
+    4. cat /data/test.txt
+    5. echo "Second line added" >> /data/test.txt
+    6. cat /data/test.txt
+    7. exit
