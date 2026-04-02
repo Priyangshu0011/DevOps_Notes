@@ -1,0 +1,12 @@
+Task:
+
+1) Inside this same running container, you are required to.
+2) Create a new directory named /project
+3) Inside /project, create a file called report.txt
+4) Add the following text inside the file:
+    This is our container interaction with our host machine.
+5) Verify the content.
+6) Copy report.txt from the container to your Desktop.
+7) Create another file named notes.txt in the same /project directory.
+8) Append the text:
+9)Verify that both files exist inside /project.~
