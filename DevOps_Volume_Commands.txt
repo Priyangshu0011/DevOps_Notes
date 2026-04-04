@@ -1,0 +1,23 @@
+Volume Commands:
+
+1. Create a Volume
+    docker volume create my_volume
+    -> Creates a named volume (my_volume) to store persistent data.
+2. List Volumes
+    docker volume ls
+    -> Shows all available volumes on your system.
+3. Inspect a Volume
+    docker volume inspect my_volume
+    -> Displays detailed info (like mount location, driver, etc.).
+4. Remove a Volume
+    docker volume rm my_volume
+    -> Deletes a specific volume (must not be in use).
+5. Remove All Unused Volumes
+    docker volume prune
+    -> Deletes all volumes not used by any container.
+6. Use Volume in a Container (Named Volume)
+    docker run -d \
+    --name my_container \
+    -v my_volume:/app/data \
+    nginx
+    -> Mounts my_volume inside container at /app/data.
