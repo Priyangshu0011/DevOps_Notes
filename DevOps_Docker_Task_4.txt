@@ -1,0 +1,14 @@
+Task:
+
+You as a DevOps engineer at a university. The web development team has built a simple HTML-based portal and wants it deployed using Docker.
+
+1) Use the official httpd image
+2) Name the container college portal.
+3) Run it in detached mode.
+4) Expose container port 80 to host port 8080.
+5) Set environment variable ENV-production.
+6) Attach a Docker volume named profile_data to store website files.
+7) Modify the index.html file inside the container.
+8) Verify the output in the browser.
+9) Check logs if the page is not loading.
+10) Stop and remove the container

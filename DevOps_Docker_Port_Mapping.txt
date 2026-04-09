@@ -1,0 +1,6 @@
+Docker Port Mapping:
+
+1) Docker port mapping connects a container’s internal port to a port on the host machine
+2) It allows applications inside the container to be accessed from outside (like in a browser)
+3) It is defined using commands like -p host_port:container_port while running the container
+4) Multiple ports can be mapped for a single container if needed

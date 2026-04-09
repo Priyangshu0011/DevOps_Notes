@@ -1,0 +1,9 @@
+Docker Networking:
+
+- Docker provides different network drivers to control how 
+containers communicate.
+
+A. Bridge Network (Default)
+1) Default network when you run a container.
+2) Containers on same bridge can communicate via IP.
+3) Best for standalone containers on single host.
