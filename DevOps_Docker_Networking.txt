@@ -7,3 +7,27 @@ A. Bridge Network (Default)
 1) Default network when you run a container.
 2) Containers on same bridge can communicate via IP.
 3) Best for standalone containers on single host.
+
+Host Network:
+
+Container shares host’s networking stack.
+1) No separate IP.
+2) Faster performance.
+3) Linux only.
+
+docker run -d --network host nginx
+curl http://localhost
+
+Overlay Network:
+
+1) Used in Docker Swarm.
+2) Connects containers across multiple hosts.
+
+# Initialize swarm
+docker swarm init
+
+# Create overlay network
+docker network create -d overlay my_overlay
+
+# Deploy service using overlay
+docker service create --name web --network my_overlay -p 8080:80 nginx
