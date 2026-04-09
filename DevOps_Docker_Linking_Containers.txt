@@ -1,0 +1,21 @@
+Linking Containers in Docker (Legacy):
+
+1) Before custom networks, Docker used --link.
+2) Deprecated method. Use networks instead.
+docker run -d --name db nginx
+docker run -it --name app --link db:database alpine sh
+
+# Create volume
+- docker volume create my_volume
+
+# List volumes
+- docker volume ls
+
+# Run container with volume
+- docker run -d \
+  --name my_nginx \
+  -v my_volume:/usr/share/nginx/html \
+  nginx
+  
+- docker volume inspect my_volume
+- docker volume rm my_volume

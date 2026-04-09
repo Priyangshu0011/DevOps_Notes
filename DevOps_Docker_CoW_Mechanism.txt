@@ -1,0 +1,10 @@
+Copy-on-Write (CoW) Mechanism:
+
+1) Docker images use layered filesystem
+2) Basic image layer (read-only)
+3) Each new layer = read-only
+4) Container layer = writable 
+5) When file changes -> coped to writable layer
+
+docker history nginx
+docker info | grep "Storage Driver"

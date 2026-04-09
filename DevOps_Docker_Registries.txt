@@ -1,0 +1,26 @@
+Docker Registry:
+
+1) Registry = place to store images
+
+a)Docker Hub - Official public Registry
+
+    docker login
+    docker tag nginx uername/myimage:latest
+    docker push username/myimage:latest
+
+b)GitHub Container Registry
+
+- Registry provided by GitHub
+- echo YOUR_GITHUB_TOKEN | docker login ghcr.io -u 
+
+c) Private Registry
+
+- run your own Registry
+
+Authentication and Access Tokens:
+
+- Instead of password, use Access Tokens
+
+a) Docker Hub Tokens
+
+
