@@ -1,0 +1,63 @@
+Docker GHCR Task:
+
+1) Create GitHub Personal Access Token (PAT) 
+
+    i) Go to GitHub tokens then-
+        Classic Token  
+
+        Enable permissions: 
+        a) write:packages 
+        b) read:packages 
+        c) delete:packages (optional) 
+
+    ii) Copy Token 
+
+2) Create Simple Demo Project 
+    
+    i)Create Folder : 
+        a) mkdir ghcr-demo 
+        b) cd ghcr-demo 
+
+3) Create Dockerfile 
+
+    i) Create file: 
+        Dockerfile 
+    
+    ii) Inside Dockerfile: 
+        FROM nginx:alpine 
+        COPY index.html /usr/share/nginx/html/index.html 
+
+4) Create index.html 
+    i) Create file: 
+        index.html 
+    ii) Inside index.html 
+        <h1>GHCR Demo Success </h1> 
+ 
+5) Build Docker Image 
+
+    docker build -t ghcr.io/priyangshu0011/ghcr-demo . 
+ 
+6) Login to GHCR
+    i) docker login ghcr.io 
+    
+    ii) Enter: 
+        Username - GitHub username 
+        Password - PAT token 
+   
+7)Push Image to GHCR 
+
+    docker push ghcr.io/priyangshu0011/ghcr-demo 
+ 
+8) Pull Image Back (Proof of Success) 
+      
+    i) Remove Image 
+        docker rmi ghcr.io/priyangshu0011/ghcr-demo 
+    ii) Pull Again 
+        docker pull ghcr.io/priyangshu0011/ghcr-demo 
+ 
+9) Run Container (Final Visual Proof) 
+ 
+    docker run -p 8080:80 ghcr.io/priyangshu0011/ghcr-demo 
+
+10) Open browser:
+    http://localhost:8080 
