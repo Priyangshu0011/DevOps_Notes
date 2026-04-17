@@ -13,3 +13,13 @@ Tasks:
 5. Access the Apache web server using a browser.
 
 Chnage the index.html through the commands in Docker itself in httpd container
+
+Answers:
+
+docker pull httpd
+docker images
+docker run -dit --name apache-web -p 8081:80 httpd
+docker ps
+docker exec -it apache-web bash
+echo "<h1>Welcome to Apache Docker Server</h1>" > /usr/local/apache2/htdocs/index.html
+exit

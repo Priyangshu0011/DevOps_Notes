@@ -19,3 +19,27 @@ ENV_MODE=production. Write the docker run command to achieve this.
 3)A container named web_server was stopped. Write the command to: 
     a)Start the container again. 
     b)Stop the container when needed. 
+
+Answers:
+
+(For Task)
+docker exec -it apache-web bash
+mkdir /project
+cd /project
+touch report.txt
+echo "This is our container interaction with our host machine." > report.txt
+cat report.txt
+exit
+docker cp apache-web:/project/report.txt ~/Desktop/report.txt
+docker exec -it apache-web bash
+cd /project
+touch notes.txt
+echo "Additional notes inside container." >> notes.txt
+ls /project
+exit
+
+(For Practice Questions)
+docker run -dit -e ENV_MODE=production nginx
+docker logs -f my_app
+docker start web_server
+docker stop web_server
