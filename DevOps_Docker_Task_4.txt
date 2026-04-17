@@ -12,3 +12,16 @@ You as a DevOps engineer at a university. The web development team has built a s
 8) Verify the output in the browser.
 9) Check logs if the page is not loading.
 10) Stop and remove the container
+
+Answers:
+
+docker pull httpd
+docker volume create profile_data
+docker run -dit --name college_portal -p 8080:80 -e ENV=production -v profile_data:/usr/local/apache2/htdocs httpd
+docker exec -it college_portal bash
+echo "<h1>College Portal</h1>" > /usr/local/apache2/htdocs/index.html
+exit
+docker ps
+docker logs college_portal
+docker stop college_portal
+docker rm college_portal
