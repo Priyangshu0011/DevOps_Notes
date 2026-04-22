@@ -1,0 +1,19 @@
+Monolithic and Microservices
+
+a) Monolithic: All the application code is documented into a single codebase
+
+b) Microservices: The application code is divided into singular meaningful modules
+
+Layers of Microservices:
+1) Data Access Layer
+2) Data Store Layer
+ 
+Each Microservice has its own database.
+
+Limitations of Microservices:
+1) Data Consistency
+2) Increased Latency
+3) Data complexity
+4) Complex Structure
+
+
