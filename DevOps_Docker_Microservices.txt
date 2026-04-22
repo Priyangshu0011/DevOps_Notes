@@ -16,4 +16,9 @@ Limitations of Microservices:
 3) Data complexity
 4) Complex Structure
 
+Concept of containers:  a container is a lightweight, standalone and executable package that includes everything 
+needed to run an application such as code, runtime, system tools, system libraries and settings.
+
+# Docker Compose: a tool to manage multi-containers
+ 
 
