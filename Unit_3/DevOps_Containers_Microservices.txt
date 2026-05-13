@@ -1,0 +1,29 @@
+Containers and microservices
+1) Containers and microservices are two important technologies driving the 
+future of development.
+2) While they share many similarities, there are key differences that must 
+be understood when determining which approach is right for an 
+application.
+3) Containers enable portability and resource efficiency while offering great 
+scalability options through containerization technology such as Docker 
+or Kubernetes.
+4) On the other hand, Microservices allow flexibility due to their modular 
+design, allowing applications to scale up without major changes in 
+architecture all the while leveraging communication between services 
+over a network connection; this also makes DevOps easier than ever 
+before!
+
+Docker Compose helps:
+
+1.  Define multiple services
+2.  Manage networking
+3.  Control dependencies
+4.  Scale services
+5.  Reproduce architecture easily
+
+Compose = Practical enabler of microservices (especially in dev/testing)
+
+Docker Compose is a tool used to define and manage multi-container
+
+Docker applications using a YAML configuration file.
+

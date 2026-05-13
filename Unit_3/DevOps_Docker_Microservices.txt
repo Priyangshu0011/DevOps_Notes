@@ -19,6 +19,16 @@ Limitations of Microservices:
 Concept of containers:  a container is a lightweight, standalone and executable package that includes everything 
 needed to run an application such as code, runtime, system tools, system libraries and settings.
 
+1) Containers are Operating System-level virtualization technologies that 
+allow multiple isolated applications to run on a single host or instance.
+2) They provide agile, cost efficient, and automated application 
+deployment in which processes are packaged with all the necessary 
+dependencies inside their own separate instances for easy access and 
+portability.
+3) Containers also offer greater levels of isolation between resources and 
+improve resource utilization compared to traditional virtual machines by 
+using fewer hardware resources.
+
 # Docker Compose: a tool to manage multi-containers
  
 

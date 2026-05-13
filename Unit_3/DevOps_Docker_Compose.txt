@@ -1,0 +1,22 @@
+Key idea:
+1. Instead of running containers individually
+2. Define the entire application stack declaratively
+
+# Need of Docker Compose 
+Problem Without Compose
+Modern applications rarely use a single container.
+
+Typical stack:
+1. Web application
+2. Database
+3. Cache
+4. Backend API
+5. Message queue
+
+
+Too many commands
+
+1. Hard to remember parameters
+2. Hard to reproduce setup
+3. Networking complexity
+4. Dependency issues
