@@ -1,0 +1,10 @@
+mkdir test123
+
+cd test123
+
+docker run --rm -it -v %cd%:/app -w /app maven:3.9.10-eclipse-temurin-17 mvn 
+archetype:generate -DgroupId=com.example -DartifactId=demo-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+cd demo-app
+
+docker run --rm -it -v %cd%:/app -w /app maven:3.9.10-eclipse-temurin-17 mvn clean install

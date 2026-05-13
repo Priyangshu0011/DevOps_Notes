@@ -1,0 +1,31 @@
+Why Build Tools?:
+
+1. Manual Compilation Pain
+    Developers had to remember exact javac commands, classpaths, and 
+    dependencies for every build — error-prone and time-consuming.
+2. Inconsistent Builds
+    Without a standard process, builds differed between developers, CI 
+    servers, and production — causing unpredictable failures.
+3. Dependency Hell
+    Managing JAR files manually led to version conflicts, missing libraries, 
+    and the infamous 'works on my machine' syndrome.
+4. Repetitive Tasks
+    Testing, packaging, and deploying were manual steps that had to be 
+    repeated identically every release cycle.
+
+Lifecycle Phases:
+
+1. validate
+    Checks project is correct & all required info is available
+2. compile
+    Compiles source code of the project into .class files
+3. test
+    Runs unit tests using a testing framework (e.g., JUnit)
+4. package
+    Bundles compiled code into distributable format (JAR/WAR)
+5. verify
+    Runs integration checks to ensure quality criteria are met
+6. install
+    Installs artifact into local Maven repository (~/.m2)
+7. deploy
+    Copies final artifact to remote repository for sharing

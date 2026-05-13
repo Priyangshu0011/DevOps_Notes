@@ -1,0 +1,14 @@
+1. Build JAR 
+    mvn package produces the application JAR in target/
+
+2. Write Dockerfile
+    Multi-stage Dockerfile: base image → copy 
+    JAR → ENTRYPOINT
+
+3. Build Image 
+    dockerfile-maven-plugin runs docker build as part of mvn install
+
+4. Tag Image 
+    Plugin tags image with project version automatically
+5. Push to Registry
+    mvn deploy pushes image to Docker Hub/ECR/GCR

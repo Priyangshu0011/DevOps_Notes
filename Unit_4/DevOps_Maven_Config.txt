@@ -1,0 +1,28 @@
+# What is a Parent POM?
+A Parent POM is a special POM that other projects inherit from. 
+Child modules automatically receive all dependency versions, 
+plugin configs, and properties defined in the parent, ensuring DRY 
+(Don't Repeat Yourself) principles across large projects.
+
+# Key Benefits:
+1. Centralized dependency version management
+2. Shared plugin configuration
+3. Consistent build behavior
+4. Single place to update versions
+5. Spring Boot provides its own parent POM
+
+# Transitive Dependencies
+When you declare A→B, Maven automatically pulls in all of B's 
+dependencies (B→C, C→D ...). You get the full tree without 
+manually declaring each transitive dep.
+
+# Conflict Resolution — Nearest Wins
+If two paths lead to the same artifact with different versions, 
+Maven picks the version closest to the project root in the 
+dependency tree (shortest path).
+
+# Solutions:
+1. Explicit direct dependency declaration
+2. <exclusions> to remove unwanted transitives
+3. <dependencyManagement> to enforce a version
+4. BOM (Bill of Materials) import

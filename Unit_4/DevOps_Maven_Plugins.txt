@@ -1,0 +1,22 @@
+Plugins bind goals to lifecycle phases. A goal is a specific task (like compile:compile or surefire:test). Each plugin has one or more 
+goals.
+
+# Compiler Plugin
+Controls Java source/target version for compilation.
+
+# Surefire Plugin
+Runs unit tests. Generates test reports. Skips with -DskipTests.
+
+#What is an Uber JAR?
+An Uber (German for 'over/super') JAR is a single fat JAR that 
+contains your compiled code PLUS all its dependency JARs 
+merged inside it.
+
+This makes deployment trivially simple — ship one file, run 
+anywhere with java -jar.
+
+# When to use:
+1. CLI tools that need to be self-contained
+2. Microservices deployed to containers
+3. Spark/Hadoop jobs submitted to clusters
+4. Anywhere classpath management is painful
