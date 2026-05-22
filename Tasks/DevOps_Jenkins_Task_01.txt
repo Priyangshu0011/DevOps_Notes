@@ -1,0 +1,8 @@
+Step 1: Click “New Item”
+Step 2: Enter a name
+Step 3: Choose “Freestyle project”
+Step 4: Configure:
+Step 5: Source Code Management (Git)
+Step 6: Build Trigger (e.g., Poll SCM or on Push)
+Step 7: Build (e.g., Execute Shell or Invoke Maven)
+Step 8: Click “Save” and then “Build Now”

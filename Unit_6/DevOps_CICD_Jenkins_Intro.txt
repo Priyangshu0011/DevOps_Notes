@@ -1,0 +1,17 @@
+CI/CD is a process of automating code 
+integration, build creation, and testing.
+
+Jenkins is an open-source automation server. 
+It helps automate the parts of software development related to building, 
+testing, and deploying, facilitating Continuous Integration and Continuous 
+Delivery (CI/CD).
+
+Use of Jenkins:
+
+1. Automates code builds and tests
+2. Integrates with Git, Docker, Maven, Kubernetes, etc.
+3. Supports pipelines for end-to-end automation
+
+
+
+

@@ -1,0 +1,81 @@
+mkdir neww
+
+cd new
+
+mkdir -p src/main/java/com/example
+
+notepad src/main/java/com/example/Application.java
+
+package com.example;
+
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.*;
+@SpringBootApplication
+@RestController
+
+public class Application {
+
+    public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+    }
+    @GetMapping("/")
+    public String home() {
+    return "CI/CD Working!";
+    }
+}
+
+notepad Dockerfile
+
+FROM openjdk:17
+COPY target/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+
+
+notepad Jenkinsfile
+
+pipeline {
+    agent any
+    tools {
+        maven 'Maven'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                bat 'mvn clean package'
+            }
+        }
+    }
+}
+
+
+Create pom.xml
+
+ <project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>app</artifactId>
+    <version>1.0</version>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.0</version>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+
+
+git init
+git add .
+git commit -m "added project files"
+git branch -M main
+git remote add origin https://github.com/priyangshu0011/neww.git
+git push -u origin main

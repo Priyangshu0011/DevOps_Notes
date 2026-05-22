@@ -1,0 +1,24 @@
+What is a Jenkins Pipeline?
+
+- A pipeline is a set of automated steps that Jenkins follows to build, test, and deploy your application.
+
+
+Why Use a Pipeline?
+
+1. Automate the entire CI/CD process
+2. Make builds repeatable and version-controlled
+3. Run complex workflows (parallel stages, conditional logic, etc.)
+4. Use code to define build steps (called "Pipeline as Code")
+
+
+Two Types of Pipelines
+Type 1: Declarative
+
+Description: 
+1. Easier to read and write. 
+2. Structured and recommended for beginners.
+
+Type 2: Scripted
+1. More flexible but uses Groovy scripting
+2. best for advanced users.
+
