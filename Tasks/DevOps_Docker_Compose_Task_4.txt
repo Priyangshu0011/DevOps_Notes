@@ -1,0 +1,128 @@
+Multi-Container CI/CD Project:
+
+1) Frontend package.json:
+
+{
+  "name": "frontend-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+2) Frontend server.js:
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Frontend Running Successfully');
+});
+
+app.listen(3000, () => {
+  console.log('Frontend running on port 3000');
+});
+
+3)Frontend Dockerfile:
+
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+
+4)Backend Application.java:
+
+package com.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class Application {
+
+    @GetMapping("/")
+    public String home() {
+        return "Backend Running Successfully";
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+
+5) Backend Dockerfile:
+
+FROM eclipse-temurin:17
+
+WORKDIR /app
+
+COPY target/*.jar app.jar
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "app.jar"]
+
+6) docker-compose.yml:
+
+services:
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+    ports:
+      - "3306:3306"
+
+7) GitHub Actions Workflow:
+
+name: Multi-Container CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Frontend Image
+        run: docker build -t frontend-app ./frontend
+
+      - name: Build Backend Image
+        run: docker build -t backend-app ./backend
+
+      - name: Verify Docker Images
+        run: docker images
